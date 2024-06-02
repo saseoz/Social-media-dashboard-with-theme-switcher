@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+  
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container">
+    <header class="header-container">
+      <div class="header__title-stack">
+        <h1 class="header__title">Social Media Dashboard</h1>
+        <p class="header__descr">Total Followers: 23,004</p>
+      </div>
+      <hr class="header__hr">
+      <div class="header__mode-btn-stack flex">
+        <p class="header__mode-text">Dark Mode</p>
+        <button class="header__btn" aria-label="toggle dark mode">
+          <div class="header__btn-circle"></div>
+        </button>
+      </div>
+    </header>
+
+    <main class="main-container">
+
+      <section class="main-intro">
+        <button class="main-intro__card main-intro__card-fb">
+          <div class="main-intro__header-stack flex">
+            <img src="images/icon-facebook.svg" alt="">
+            <p class="main-intro__social-name">@nathanf</p>
+          </div>
+          <h2 class="main-intro__follower-num">1987<span class="main-intro-follower-text">Followers</span></h2>
+          <div class="main-intro__footer-stack flex">
+            <img src="images/icon-up.svg" alt="">
+            <p class="main-intro__today-text">12 Today</p>
+          </div>
+        </button>
+        <button class="main-intro__card main-intro__card-tw">
+          <div class="main-intro__header-stack flex">
+            <img src="images/icon-twitter.svg" alt="">
+            <p class="main-intro__social-name">@nathanf</p>
+          </div>
+          <h2 class="main-intro__follower-num">1044 <span class="main-intro-follower-text">Followers</span></h2>
+          <div class="main-intro__footer-stack flex">
+            <img src="images/icon-up.svg" alt="">
+            <p class="main-intro__today-text">99 Today</p>
+          </div>
+        </button>
+        <button class="main-intro__card main-intro__card-ig">
+          <div class="main-intro__header-stack flex">
+            <img src="images/icon-instagram.svg" alt="">
+            <p class="main-intro__social-name">@realnathanf</p>
+          </div>
+          <h2 class="main-intro__follower-num">11k <span class="main-intro-follower-text">Followers</span></h2>
+          <div class="main-intro__footer-stack flex">
+            <img src="images/icon-up.svg" alt="">
+            <p class="main-intro__today-text">1099 Today</p>
+          </div>
+        </button>
+        <button class="main-intro__card main-intro__card-yt">
+          <div class="main-intro__header-stack flex">
+            <img src="images/icon-youtube.svg" alt="">
+            <p class="main-intro__social-name">Nathan F.</p>
+          </div>
+          <h2 class="main-intro__follower-num"> 8239<span class="main-intro-follower-text">Subscribers</span></h2>
+          <div class="main-intro__footer-stack flex">
+            <img src="images/icon-down.svg" alt="">
+            <p class="main-intro__today-text">144 Today</p>
+          </div>
+        </button>
+      </section>
+
+      <section class="main-overview">
+        <h3 class="main-overview__title">Overview - Today</h3>
+        <div class="main-overview__card-container">
+          <button class="main-overview__card">
+            <div class="main-overview__header-stack flex">
+              <p class="main-overview__subtitle">Page Views</p>
+              <img src="images/icon-facebook.svg" alt="">
+            </div>
+            <div class="main-overview__footer-stack flex">
+              <h4 class="main-overview__num">87</h4>
+              <div class="main-overview__percent-stack flex">
+                <img src="images/icon-up.svg" alt="">
+                <p class="main-overview__percent">3%</p>
+              </div>
+            </div>
+          </button>
+          <button class="main-overview__card">
+            <div class="main-overview__header-stack flex">
+              <p class="main-overview__subtitle">Likes</p>
+              <img src="images/icon-facebook.svg" alt="">
+            </div>
+            <div class="main-overview__footer-stack flex">
+              <h4 class="main-overview__num">52</h4>
+              <div class="main-overview__percent-stack flex">
+                <img src="images/icon-down.svg" alt="">
+                <p class="main-overview__percent main-overview__percent--red">2%</p>
+              </div>
+            </div>
+          </button>
+          <button class="main-overview__card">
+            <div class="main-overview__header-stack flex">
+              <p class="main-overview__subtitle">Likes</p>
+              <img src="images/icon-instagram.svg" alt="">
+            </div>
+            <div class="main-overview__footer-stack flex">
+              <h4 class="main-overview__num">5462</h4>
+              <div class="main-overview__percent-stack flex">
+                <img src="images/icon-up.svg" alt="">
+                <p class="main-overview__percent">2257%</p>
+              </div>
+            </div>
+          </button>
+          <button class="main-overview__card">
+            <div class="main-overview__header-stack flex">
+              <p class="main-overview__subtitle">Profile Views</p>
+              <img src="images/icon-instagram.svg" alt="">
+            </div>
+            <div class="main-overview__footer-stack flex">
+              <h4 class="main-overview__num">52k</h4>
+              <div class="main-overview__percent-stack flex">
+                <img src="images/icon-up.svg" alt="">
+                <p class="main-overview__percent">1375%</p>
+              </div>
+            </div>
+          </button>
+          <button class="main-overview__card">
+            <div class="main-overview__header-stack flex">
+              <p class="main-overview__subtitle">Retweets</p>
+              <img src="images/icon-twitter.svg" alt="">
+            </div>
+            <div class="main-overview__footer-stack flex">
+              <h4 class="main-overview__num">117</h4>
+              <div class="main-overview__percent-stack flex">
+                <img src="images/icon-up.svg" alt="">
+                <p class="main-overview__percent">303%</p>
+              </div>
+            </div>
+          </button>
+          <button class="main-overview__card">
+            <div class="main-overview__header-stack flex">
+              <p class="main-overview__subtitle">Likes</p>
+              <img src="images/icon-twitter.svg" alt="">
+            </div>
+            <div class="main-overview__footer-stack flex">
+              <h4 class="main-overview__num">507</h4>
+              <div class="main-overview__percent-stack flex">
+                <img src="images/icon-up.svg" alt="">
+                <p class="main-overview__percent">553%</p>
+              </div>
+            </div>
+          </button>
+          <button class="main-overview__card">
+            <div class="main-overview__header-stack flex">
+              <p class="main-overview__subtitle">Likes</p>
+              <img src="images/icon-youtube.svg" alt="">
+            </div>
+            <div class="main-overview__footer-stack flex">
+              <h4 class="main-overview__num">107</h4>
+              <div class="main-overview__percent-stack flex">
+                <img src="images/icon-down.svg" alt="">
+                <p class="main-overview__percent main-overview__percent--red">19%</p>
+              </div>
+            </div>
+          </button>
+          <button class="main-overview__card">
+            <div class="main-overview__header-stack flex">
+              <p class="main-overview__subtitle">Total Views</p>
+              <img src="images/icon-youtube.svg" alt="">
+            </div>
+            <div class="main-overview__footer-stack flex">
+              <h4 class="main-overview__num">1407</h4>
+              <div class="main-overview__percent-stack flex">
+                <img src="images/icon-down.svg" alt="">
+                <p class="main-overview__percent main-overview__percent--red">12%</p>
+              </div>
+            </div>
+          </button>
+        </div>
+      </section>
+      
+    </main>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,283 @@
+:root {
+    --LimeGreen: hsl(163, 72%, 41%);
+    --BrightRed: hsl(356, 69%, 56%);
+
+    --Facebook: hsl(208, 92%, 53%);
+    --Twitter: hsl(203, 89%, 53%);
+    --Instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+    --YouTube: hsl(348, 97%, 39%);
+
+    --Toggle: hsl(230, 22%, 74%);
+    --Toggle2: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+
+    --Bg: hsl(0, 0%, 100%);
+    --TopBg: hsl(225, 100%, 98%);
+    --CardBg:  hsl(227, 47%, 96%);
+    --TextGray: hsl(228, 12%, 44%);
+    --NumClr: hsl(230, 17%, 14%);
+    --cardSelected: hsl(232, 32%, 91%);
+    --hr: hsl(226, 9%, 63%);
+    
+}
+.darkmode {
+    --Toggle: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    --Toggle2: hsl(230, 22%, 74%);
+
+    --Bg: hsl(230, 17%, 14%);
+    --TopBg: hsl(232, 19%, 15%);
+    --CardBg: hsl(228, 28%, 20%);
+    --TextGray: hsl(228, 34%, 66%);
+    --NumClr: hsl(0, 0%, 100%);
+    --cardSelected: hsl(228, 26%, 27%);
+    --hr: hsl(232, 17%, 25%);
+}
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    outline: none;
+}
+button {
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+}
+.flex {
+    display: flex;
+    align-items: center;
+}
+body {
+    font-family: "Inter", sans-serif; /* 4 7*/
+    padding: 2.2rem 1.5rem;
+    font-weight: 400;
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    background: var(--TopBg);
+}
+body, body * {
+    transition: color .3s ease, 
+                background-color .3s ease, 
+                background .3s ease;
+}
+.container {
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto;
+}
+/* header */
+.header-container {
+    margin-bottom: 2.8rem;
+}
+.header__title {
+    font-size: 1.5rem;
+    color: var(--NumClr);
+    margin-bottom: .3rem;
+}
+.header__descr {
+    font-size: 1rem;
+    color:var(--TextGray);
+    font-weight: 700;
+}
+.header__hr {
+    margin-block: 1rem;
+    height: 1px;
+    background-color: var(--hr);
+    border: none;
+}
+.header__mode-btn-stack {
+    justify-content: space-between;
+    align-items: end;
+}
+.header__mode-text {
+    color: var(--TextGray);
+    font-weight: 700;
+    font-size: .85rem;
+}
+.header__btn {   
+    background: var(--Toggle);
+    padding-block: .2rem;
+    border-radius: 1rem;
+    width: 50px;
+    height: 24px;
+    position: relative;
+    transition: background .3s ease;
+}
+.header__btn:focus {
+    background: var(--Toggle2);
+}
+.header__btn-circle {
+    width: 18px;
+    aspect-ratio: 1 / 1;
+    background-color: var(--TopBg);
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 5px;
+    transition: left .3s ease, background-color .3s ease;
+}
+/* main intro */
+.main-intro {
+    display: grid;
+    margin-bottom: 3rem;
+    gap: 1.5rem
+}
+.main-intro__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: .3rem;
+    padding: 1.5rem;
+    background-color: var(--CardBg);
+}
+.main-intro__card:hover, 
+.main-intro__card:focus {
+    background-color: var(--cardSelected);
+}
+.main-intro__card > * + * {
+    margin-top: 1.3rem;
+}
+.main-intro__card-fb {
+    border-top: 4px solid var(--Facebook);
+}
+.main-intro__card-tw {
+    border-top: 4px solid var(--Twitter);
+}
+.main-intro__card-ig {
+    position: relative;
+    overflow: hidden;
+}
+.main-intro__card-ig::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--Instagram);
+}
+.main-intro__card-yt {
+    border-top: 4px solid var(--YouTube);
+}
+.main-intro__social-name {
+    color: var(--TextGray);
+    font-weight: 700;
+    margin-left: .5rem;
+}
+.main-intro__follower-num {
+    font-size: 3rem;
+    color: var(--NumClr);
+}
+.main-intro-follower-text {
+    display: block;
+    color: var(--TextGray);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: .8rem;
+    font-weight: 400;
+}
+.main-intro__footer-stack {
+    align-items: center;
+}
+.main-intro__today-text {
+    color: var(--LimeGreen);
+    font-weight: 700;
+    margin-left: .3rem;
+}
+.main-intro__card-yt .main-intro__today-text {
+    color: var(--BrightRed);
+}
+/* main overview */
+.main-overview__title {
+    margin-bottom: 1.5rem;
+    color: var(--TextGray);
+    font-size: 1.45rem;
+}
+.main-overview__card-container {
+    display: grid;
+    gap: 1rem;
+}
+.main-overview__card {
+    border-radius: .3rem;
+    padding: 1.5rem;
+    background-color: var(--CardBg);
+    transition: background-color .3s ease;
+}
+.main-overview__card:hover, 
+.main-overview__card:focus {
+    background-color: var(--cardSelected);
+}
+.main-overview__card > * + * {
+    margin-top: 1.7rem;
+}
+.main-overview__card > * {
+    width: 100%;
+}
+.main-overview__header-stack, 
+.main-overview__footer-stack {
+    justify-content: space-between;
+}
+.main-overview__subtitle {
+    color: var(--TextGray);
+    font-weight: 700;
+}
+.main-overview__num {
+    font-size: 2rem;
+    color: var(--NumClr);
+
+}
+.main-overview__percent-stack {
+    gap: .2rem;
+}
+.main-overview__percent {
+    color: var(--LimeGreen);
+    font-weight: 700;
+}
+.main-overview__percent--red {
+    color: var(--BrightRed);
+}
+@media (min-width: 600px) {
+    .container {
+        max-width: unset;
+    }
+    .main-intro {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .main-overview__card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (min-width: 900px) {
+    body {
+        background: linear-gradient(to bottom, var(--TopBg) 0%, var(--TopBg) 30%, var(--Bg) 30%, var(--Bg) 100%);
+    }
+    .container {
+        max-width: 1120px;
+    }
+    .header__title {
+        font-size: 1.7rem;
+    }
+    .header__hr {
+        display: none;
+    }
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .header__mode-btn-stack {
+        gap: 1rem;
+        align-items: center;
+    }
+    .main-intro {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .main-overview__card-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media (min-width: 2000px) {
+    body {
+        background: linear-gradient(to bottom, var(--TopBg) 0%, var(--TopBg) 40%, var(--Bg) 40%, var(--Bg) 100%);
+    }
+}
